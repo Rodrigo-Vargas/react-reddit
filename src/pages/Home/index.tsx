@@ -1,6 +1,6 @@
-import Card from "../components/Card";
+import Card from "../../components/Card";
 
-const App = () => {
+const HomePage = () => {
    const cards = [
       {
          title: "What Car Should I Buy? - A Weekly Megathread",
@@ -17,7 +17,9 @@ const App = () => {
          <div className="container">
             {
                cards.map(card => (
-                  <Card data={card} />
+                  <div className="bg-white p-5">
+                     <Card data={card} />
+                  </div>
                ))
             }
          </div>
@@ -25,4 +27,4 @@ const App = () => {
    )
 }
 
-export default App;
+export default HomePage;

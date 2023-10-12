@@ -3,22 +3,26 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Card = ({data}) => {
    return (
-      <div className="bg-white p-5">
-         <div className="title">
-            <h1 className="text-xl inline pr-3">{data.title}</h1>
-            <span className="text-gray-400 text-sm">i.imgur.com</span>
-         </div>
+      <div>
+         <div className="flex flex-row justify-between">
+            <div>
+               <a className="flex items-center" href="/detail">
+                  <h1 className="text-xl inline pr-3">{data.title}</h1>
+                  <span className="text-gray-400 text-sm">i.imgur.com</span>
+               </a>
+            </div>
 
-         <div className="vote flex items-center">
-            <a href="" className="bg-orange-500 text-white h-8 w-8 text-center flex justify-center items-center rounded-full">
-               <FontAwesomeIcon icon={faUpLong} />
-            </a>
+            <div className="flex items-center">
+               <a href="" className="bg-orange-500 text-white h-8 w-8 text-center flex justify-center items-center rounded-full">
+                  <FontAwesomeIcon icon={faUpLong} />
+               </a>
 
-            <span className="text-orange-500 px-2">5450</span>
+               <span className="text-orange-500 px-2">5450</span>
 
-            <a href="" className="bg-orange-500 text-white h-8 w-8 text-center flex justify-center items-center rounded-full">
-               <FontAwesomeIcon icon={faDownLong} />
-            </a>
+               <a href="" className="bg-orange-500 text-white h-8 w-8 text-center flex justify-center items-center rounded-full">
+                  <FontAwesomeIcon icon={faDownLong} />
+               </a>
+            </div>
          </div>
 
          <div className="meta text-sm">
