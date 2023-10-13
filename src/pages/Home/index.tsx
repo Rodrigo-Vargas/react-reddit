@@ -1,4 +1,5 @@
 import Card from "../../components/Card";
+import BaseLayout from "../../layouts/Base";
 
 const HomePage = () => {
    const cards = [
@@ -13,17 +14,15 @@ const HomePage = () => {
    ];
 
    return (
-      <div className="py-10" style={{backgroundColor: "#f7f7f7"}}>
-         <div className="container">
-            {
-               cards.map(card => (
-                  <div className="bg-white p-5">
-                     <Card data={card} />
-                  </div>
-               ))
-            }
-         </div>
-      </div>
+      <BaseLayout>            
+         {
+            cards.map(card => (
+               <div className="p-5">
+                  <Card data={card} />
+               </div>
+            ))
+         }
+      </BaseLayout>
    )
 }
 

@@ -1,5 +1,6 @@
 import Card from "../../components/Card";
 import Comments from "../../components/Comments";
+import BaseLayout from "../../layouts/Base";
 
 const DetailPage = () => {
    const cardInfo = {
@@ -8,12 +9,12 @@ const DetailPage = () => {
    };
 
    return (
-      <div className="py-10" style={{ backgroundColor: "#f7f7f7" }}>
-         <div className="container bg-white p-5">
+      <BaseLayout>
+         <div className="p-5">
             <Card data={cardInfo} />
             <Comments />
          </div>
-      </div>
+      </BaseLayout>
    )
 }
 
